@@ -9,6 +9,14 @@ const viagemSchema = new mongoose.Schema({
         required: true,
         default: new Date()
     },
+    localSaida:{
+        type: String,
+        required: true
+    },
+    localChegada:{
+        type: String,
+        required: true
+    },
     turno: {
         type: String,
         required: true
