@@ -1,3 +1,5 @@
+/*
+
 const express = require("express");
 const router = express.Router();
 const controller = require("../controllers/caronaController");
@@ -11,3 +13,5 @@ router.patch("/atualizar/:id", controller.updateCarona);
 router.delete("/deletar/:id", controller.deleteCarona);
 
 module.exports = router
+
+*/

@@ -1,3 +1,5 @@
+/*
+
 const caronaSchema = require("../models/caronaSchema");
 const mongoose = require("mongoose");
 
@@ -45,3 +47,5 @@ module.exports = {
     updateCarona,
     deleteCarona
 }
+
+*/
