@@ -13,6 +13,10 @@ const usuarioSchema = new mongoose.Schema({
         unique: true,
         required: true
     },
+    dataNascimento: {
+        type: String,
+        required:true
+    },
     rg: {
         type: String,
         unique: true,

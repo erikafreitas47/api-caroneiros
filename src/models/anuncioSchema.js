@@ -52,6 +52,10 @@ const anuncioSchema = new mongoose.Schema({
     aceitaPets: {
         type: Boolean,
         required: true
+    },
+    cadeiraBebe: {
+        type: Boolean,
+        required: true
     }
 })
 

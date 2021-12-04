@@ -24,6 +24,7 @@ const createAnuncio = async (request, response) => {
             espacoMala: request.body.espacoMala,
             vagas: request.body.vagas,
             aceitaPets: request.body.aceitaPets,
+            cadeiraBebe: request.body.cadeiraBebe,
             _id: new mongoose.Types.ObjectId()
         })
 
@@ -58,6 +59,7 @@ const updateAnuncio = async (request, response) => {
             anuncioEncontrado.espacoMala = request.body.espacoMala || anuncioEncontrado.espacoMala;
             anuncioEncontrado.vagas = request.body.vagas || anuncioEncontrado.vagas;
             anuncioEncontrado.aceitaPets = request.body.aceitaPets || anuncioEncontrado.aceitaPets;
+            anuncioEncontrado.cadeiraBebe = request.body.cadeiraBebe || anuncioEncontrado.cadeiraBebe
         }
 
         const anuncioSalvo = await anuncioEncontrado.save();

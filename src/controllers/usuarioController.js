@@ -15,6 +15,7 @@ const createUser = async (request, response) => {
         const usuario = new usuarioSchema({
             nome: request.body.nome,
             email: request.body.email,
+            dataNascimento: request.body.dataNascimento,
             rg: request.body.rg,
             telefone: request.body.telefone,
             senha: request.body.senha,
@@ -43,6 +44,7 @@ const updateUser = async (request, response) => {
         if (usuarioEncontrado) {
             usuarioEncontrado.nome = request.body.nome || usuarioEncontrado.nome;
             usuarioEncontrado.email = request.body.email || usuarioEncontrado.email;
+            usuarioEncontrado.dataNascimento = request.body.dataNascimento || usuarioEncontrado.dataNascimento;
             usuarioEncontrado.telefone = request.body.telefone || usuarioEncontrado.telefone;
             usuarioEncontrado.senha = request.body.senha || usuarioEncontrado.senha;
         }
