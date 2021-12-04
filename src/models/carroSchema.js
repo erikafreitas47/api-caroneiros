@@ -28,6 +28,7 @@ const carroSchema = new mongoose.Schema({
         type: Boolean,
         required: true
     }
+    //tamanho da mala, cadeirinha do bebe
 })
 
 module.exports = mongoose.model("carro", carroSchema);

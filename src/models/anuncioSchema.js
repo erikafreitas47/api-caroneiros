@@ -1,9 +1,15 @@
 const mongoose = require("mongoose");
 
-const viagemSchema = new mongoose.Schema({
+const anuncioSchema = new mongoose.Schema({
 
     id: mongoose.Schema.Types.ObjectId,
 
+    usuario: {
+        type: String,
+        required: true,
+        unique: false,
+        ref: 'usuario'
+    },
     dataViagem: {
         type: Date,
         required: true,
@@ -27,7 +33,9 @@ const viagemSchema = new mongoose.Schema({
     },
     carro: {
         type: String,
-        required: true
+        required: true,
+        unique: false,
+        ref: 'carro'
     },
     arCondicionado: {
         type: Boolean,
@@ -47,4 +55,4 @@ const viagemSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model("viagem", viagemSchema);
+module.exports = mongoose.model("anuncio", anuncioSchema);
