@@ -52,6 +52,7 @@ A construção do projeto contou com as seguintes tecnologias:
 * Implementar canal de mensagem entre quem oferece e quem busca a carona
 * Deixar comentários e likes/dislikes sobre o motorista e a viagem
 * Opção de dividir gasolina
+* Opção de caronas para encomendas
 
 ## 🗣️ Agradecimentos
 
