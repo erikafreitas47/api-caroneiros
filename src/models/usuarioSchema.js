@@ -14,8 +14,8 @@ const usuarioSchema = new mongoose.Schema({
         lowercase: true,
         required: true
     },
-    dataNascimento: {
-        type: String,
+    idade: {
+        type: Number,
         required:true
     },
     rg: {

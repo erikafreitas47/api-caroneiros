@@ -5,7 +5,7 @@ const anuncioSchema = new mongoose.Schema({
     id: mongoose.Schema.Types.ObjectId,
 
     usuario: {
-        type: String,
+        type: mongoose.Schema.Types.ObjectId,
         required: true,
         unique: false,
         ref: 'usuario'

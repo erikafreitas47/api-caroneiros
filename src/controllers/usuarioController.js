@@ -15,12 +15,28 @@ const createUser = async (request, response) => {
         const usuario = new usuarioSchema({
             nome: request.body.nome,
             email: request.body.email,
-            dataNascimento: request.body.dataNascimento,
+            idade: request.body.idade,
             rg: request.body.rg,
             telefone: request.body.telefone,
             senha: request.body.senha,
             _id: new mongoose.Types.ObjectId()
         })
+
+        if (usuario.idade < 18){
+            response.status(404).json({message: "O usuário precisa ser maior de idade!"});
+        }
+
+        if (usuario.rg.length > 10){
+            response.status(404).json({message: "Por favor, insira um RG válido!"});
+        }
+
+        if (usuario.telefone.length > 11 || usuario.telefone.length < 11){
+            response.status(404).json({message: "Por favor, insira um telefone válido!"});
+        }
+
+        if (usuario.senha.length <= 4){
+            response.status(404).json({message: "A senha precisa ter mais de 4 caracteres!"});
+        }
 
         const novoUsuario = await usuario.save();
 
@@ -44,7 +60,7 @@ const updateUser = async (request, response) => {
         if (usuarioEncontrado) {
             usuarioEncontrado.nome = request.body.nome || usuarioEncontrado.nome;
             usuarioEncontrado.email = request.body.email || usuarioEncontrado.email;
-            usuarioEncontrado.dataNascimento = request.body.dataNascimento || usuarioEncontrado.dataNascimento;
+            usuarioEncontrado.idade = request.body.idade || usuarioEncontrado.idade;
             usuarioEncontrado.telefone = request.body.telefone || usuarioEncontrado.telefone;
             usuarioEncontrado.senha = request.body.senha || usuarioEncontrado.senha;
         }
