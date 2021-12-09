@@ -7,7 +7,7 @@ const db = require("./database/mongoConfig");
 const usuarioRoutes = require("./routes/usuarioRoutes");
 const anuncioRoutes = require("./routes/anuncioRoutes");
 const carroRoutes = require("./routes/carroRoutes");
-//const caronaRoutes = require("./routes/caronaRoutes");
+const caronaRoutes = require("./routes/caronaRoutes");
 
 const app = express();
 
@@ -16,7 +16,7 @@ app.use(express.json());
 app.use("/usuarios", usuarioRoutes);
 app.use("/anuncios", anuncioRoutes);
 app.use("/carros", carroRoutes);
-//app.use("/caronas", caronaRoutes);
+app.use("/caronas", caronaRoutes);
 
 db.connect();
 

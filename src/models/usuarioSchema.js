@@ -11,6 +11,7 @@ const usuarioSchema = new mongoose.Schema({
     email: {
         type: String,
         unique: true,
+        lowercase: true,
         required: true
     },
     dataNascimento: {

@@ -4,6 +4,10 @@ const carroSchema = new mongoose.Schema({
 
     id: mongoose.Schema.Types.ObjectId,
 
+    dono:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'usuario'
+    },
     marca: {
         type: String,
         required: true
