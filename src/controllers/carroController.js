@@ -1,18 +1,48 @@
 const carroSchema = require("../models/carroSchema");
+const jwt = require("jsonwebtoken");
+const SECRET = process.env.SECRET;
 const mongoose = require("mongoose");
 
 const getAllCarros = async (request, response) => {
+
+    const authHeader = request.get('authorization');
+    if (!authHeader) {
+        return response.status(401).send("Não autorizado");
+    }
+
+    const token = authHeader.split(' ')[1];
+
+    jwt.verify(token, SECRET, async function (erro) {
+        if (erro) {
+            return response.status(403).send('Token invalido!');
+    }
+
     try {
         const carros = await carroSchema.find();
         response.status(200).json(carros);
     } catch (error) {
         response.status(500).json({message: error.message});        
     }
+  })  
 }
 
 const createCarro = async (request, response) => {
+
+    const authHeader = request.get('authorization');
+    if (!authHeader) {
+        return response.status(401).send("Não autorizado");
+    }
+
+    const token = authHeader.split(' ')[1];
+
+    jwt.verify(token, SECRET, async function (erro) {
+        if (erro) {
+            return response.status(403).send('Token invalido!');
+    }
+    
     try {
         const carro = new carroSchema({
+            dono: request.body.dono,
             marca: request.body.marca,
             modelo: request.body.modelo,
             ano: request.body.ano,
@@ -23,6 +53,14 @@ const createCarro = async (request, response) => {
             cadeiraBebe: request.body.cadeiraBebe,
             _id: new mongoose.Types.ObjectId
         })
+
+        if (carro.placa.length > 7){
+            response.status(400).json({message: "A placa do carro está com o tamanho incorreto!"})
+        }
+
+        if (carro.tamanhoMala > 710){
+            response.status(400).json({message: "O tamanho da mala não existe."})
+        }
 
         const carroSalvo = await carro.save();
 
@@ -37,9 +75,24 @@ const createCarro = async (request, response) => {
     } catch (error) {
         response.status(500).json({message: error.message});        
     }
+
+  })
 }
 
 const updateCarro = async (request, response) => {
+
+    const authHeader = request.get('authorization');
+    if (!authHeader) {
+        return response.status(401).send("Não autorizado");
+    }
+
+    const token = authHeader.split(' ')[1];
+
+    jwt.verify(token, SECRET, async function (erro) {
+        if (erro) {
+            return response.status(403).send('Token invalido!');
+    }
+
     try {
         const carroEncontrado = await carroSchema.findById(request.params.id);
 
@@ -67,9 +120,23 @@ const updateCarro = async (request, response) => {
     } catch (error) {
         response.status(500).json({message: error.message});        
     }
+  })  
 }
 
 const deleteCarro = async (request, response) => {
+
+    const authHeader = request.get('authorization');
+    if (!authHeader) {
+        return response.status(401).send("Não autorizado");
+    }
+
+    const token = authHeader.split(' ')[1];
+
+    jwt.verify(token, SECRET, async function (erro) {
+        if (erro) {
+            return response.status(403).send('Token invalido!');
+    }
+
     try {
         const carroEncontrado = await carroSchema.findById(request.params.id);
         carroEncontrado.delete();
@@ -85,9 +152,8 @@ const deleteCarro = async (request, response) => {
     } catch (error) {
         response.status(500).json({message: error.message});        
     }
+  })  
 }
-
-
 
 module.exports = {
     getAllCarros,

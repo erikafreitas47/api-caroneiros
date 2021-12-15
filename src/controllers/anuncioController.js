@@ -1,4 +1,6 @@
 const anuncioSchema = require("../models/anuncioSchema");
+const jwt = require("jsonwebtoken");
+const SECRET = process.env.SECRET;
 const mongoose = require("mongoose");
 
 const getAllAnuncios = async (request, response) => {
@@ -11,6 +13,19 @@ const getAllAnuncios = async (request, response) => {
 }
 
 const createAnuncio = async (request, response) => {
+
+    const authHeader = request.get('authorization');
+    if (!authHeader) {
+        return response.status(401).send("Não autorizado");
+    }
+
+    const token = authHeader.split(' ')[1];
+
+    jwt.verify(token, SECRET, async function (erro) {
+        if (erro) {
+            return response.status(403).send('Token invalido!');
+    }
+
     try {
         const anuncio = new anuncioSchema({
             usuario: request.body.usuario,
@@ -42,9 +57,23 @@ const createAnuncio = async (request, response) => {
     } catch (error) {
         response.status(500).json({message: error.message});        
     }
+  })
 }
 
 const updateAnuncio = async (request, response) => {
+
+    const authHeader = request.get('authorization');
+    if (!authHeader) {
+        return response.status(401).send("Não autorizado");
+    }
+
+    const token = authHeader.split(' ')[1];
+
+    jwt.verify(token, SECRET, async function (erro) {
+        if (erro) {
+            return response.status(403).send('Token invalido!');
+    }
+
     try {
         const anuncioEncontrado = await anuncioSchema.findById(request.params.id);
         
@@ -75,9 +104,23 @@ const updateAnuncio = async (request, response) => {
     } catch (error) {
         response.status(500).json({message: error.message});         
     }
+  })  
 }
 
 const deleteAnuncio = async (request, response) => {
+
+    const authHeader = request.get('authorization');
+    if (!authHeader) {
+        return response.status(401).send("Não autorizado");
+    }
+
+    const token = authHeader.split(' ')[1];
+
+    jwt.verify(token, SECRET, async function (erro) {
+        if (erro) {
+            return response.status(403).send('Token invalido!');
+    }
+
     try {
         const anuncioEncontrado = await anuncioSchema.findById(request.params.id);
         anuncioEncontrado.delete();
@@ -93,8 +136,8 @@ const deleteAnuncio = async (request, response) => {
     } catch (error) {
         response.status(500).json({message: error.message});        
     }
+ })  
 }
-
 
 module.exports = {
     getAllAnuncios,

@@ -6,8 +6,11 @@ router.get("/todos", controller.getAllUsers);
 
 router.post("/criar", controller.createUser);
 
+router.post("/login", controller.login);
+
 router.patch("/atualizar/:id", controller.updateUser);
 
 router.delete("/deletar/:id", controller.deleteUser);
+
 
 module.exports = router

@@ -11,9 +11,8 @@ const anuncioSchema = new mongoose.Schema({
         ref: 'usuario'
     },
     dataViagem: {
-        type: Date,
+        type: String,
         required: true,
-        default: new Date()
     },
     localSaida:{
         type: String,

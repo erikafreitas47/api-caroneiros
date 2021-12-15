@@ -1,13 +1,31 @@
+const bcrypt = require("bcrypt");
+const SECRET = process.env.SECRET;
+const jwt = require("jsonwebtoken");
 const usuarioSchema = require("../models/usuarioSchema");
+const { hashPassword } = require("../helpers/auth");
 const mongoose = require("mongoose");
 
 const getAllUsers = async (request, response) => {
+
+    const authHeader = request.get('authorization');
+    if (!authHeader) {
+        return response.status(401).send("Não autorizado");
+    }
+
+    const token = authHeader.split(' ')[1];
+
+    jwt.verify(token, SECRET, async function (erro) {
+        if (erro) {
+            return response.status(403).send('Token invalido!');
+    }
+
     try {
         const usuarios = await usuarioSchema.find();
         response.status(200).json(usuarios);        
     } catch (error) {
         response.status(500).json({message: error.message});        
     }
+  })  
 }
 
 const createUser = async (request, response) => {
@@ -21,6 +39,10 @@ const createUser = async (request, response) => {
             senha: request.body.senha,
             _id: new mongoose.Types.ObjectId()
         })
+
+        if (usuario.nome == "" || usuario.email == "" || usuario.idade == "" || usuario.rg == "" || usuario.telefone == "" || usuario.senha == "") {
+            response.status(400).json({message: "Por favor, preencha todos os campos!"});
+        }
 
         if (usuario.idade < 18){
             response.status(404).json({message: "O usuário precisa ser maior de idade!"});
@@ -38,6 +60,10 @@ const createUser = async (request, response) => {
             response.status(404).json({message: "A senha precisa ter mais de 4 caracteres!"});
         }
 
+        const passwordHashed = await hashPassword(usuario.senha, response);
+
+        usuario.senha = passwordHashed;
+
         const novoUsuario = await usuario.save();
 
         response.status(201).json(
@@ -54,6 +80,19 @@ const createUser = async (request, response) => {
 }
 
 const updateUser = async (request, response) => {
+
+    const authHeader = request.get('authorization');
+    if (!authHeader) {
+        return response.status(401).send("Não autorizado");
+    }
+
+    const token = authHeader.split(' ')[1];
+
+    jwt.verify(token, SECRET, async function (erro) {
+        if (erro) {
+            return response.status(403).send('Token invalido!');
+    }
+
     try {
         const usuarioEncontrado = await usuarioSchema.findById(request.params.id);
         
@@ -64,6 +103,9 @@ const updateUser = async (request, response) => {
             usuarioEncontrado.telefone = request.body.telefone || usuarioEncontrado.telefone;
             usuarioEncontrado.senha = request.body.senha || usuarioEncontrado.senha;
         }
+
+        const passwordHashed = await hashPassword(usuarioEncontrado.senha, response);
+        usuarioEncontrado.senha = passwordHashed;
 
         const usuarioSalvo = await usuarioEncontrado.save();
 
@@ -78,9 +120,23 @@ const updateUser = async (request, response) => {
     } catch (error) {
         response.status(500).json({message: error.message});         
     }
+  })  
 }
 
 const deleteUser = async (request, response) => {
+
+    const authHeader = request.get('authorization');
+    if (!authHeader) {
+        return response.status(401).send("Não autorizado");
+    }
+
+    const token = authHeader.split(' ')[1];
+
+    jwt.verify(token, SECRET, async function (erro) {
+        if (erro) {
+            return response.status(403).send('Token invalido!');
+    }
+
     try {
         const usuarioEncontrado = await usuarioSchema.findById(request.params.id);
         usuarioEncontrado.delete();
@@ -96,12 +152,35 @@ const deleteUser = async (request, response) => {
     } catch (error) {
         response.status(500).json({message: error.message});        
     }
+  })  
 }
+
+const login = (request, response) => {
+
+    usuarioSchema.findOne(({email: request.body.email}), function(erro, usuario){
+  
+      if (!usuario){
+        return response.status(404).send(`Não existe usuário com o email ${request.body.email}`);
+      }
+  
+      const senhaValida = bcrypt.compareSync(request.body.senha, usuario.senha);
+  
+      if (!senhaValida) {
+        return response.status(403).send(`Senha inválida!`);
+      }
+  
+      const token = jwt.sign({ email: request.body.email }, SECRET);
+    
+      return response.status(200).send({message: "Tudo certo, segue o token:", token});
+  
+    })  
+  }
 
 
 module.exports = {
     getAllUsers,
     createUser,
     updateUser,
-    deleteUser
+    deleteUser,
+    login
 }
