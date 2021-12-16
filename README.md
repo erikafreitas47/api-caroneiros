@@ -167,6 +167,12 @@ A construção do projeto contou com as seguintes tecnologias:
 * Opção de dividir gasolina
 * Opção de caronas para encomendas
 
+## 🤝🏽 Deseja contribuir para o projeto?
+- Faça um fork do projeto.
+- Crie uma nova branch com as suas alterações: git checkout -b seu-nome
+- Salve as alterações e crie uma mensagem de commit contando o que você fez: git commit -m "minhas mudanças"
+- Envie as suas alterações: git push origin seu-nome
+
 ## 🗣️ Agradecimentos
 
 <p align="justify"> Agradeço a toda equipe da Reprograma. Entrar para esse curso foi, sem dúvidas, uma das maiores alegrias desse ano. Além de ser uma grande esperança de melhorias no futuro. Agradeço à todas as professoras que tive durante as semanas do curso. Conheci tantas mulheres incríveis que, com certeza, me inspiraram a seguir e aprender mais. A nossa querida facilitadora, as nossas monitoras sempre presentes, e principalmente as minhas colegas de turma. Essas mulheres incríveis que com certeza acompanharei para o resto da vida. Passar esses meses ao lado dessas mulheres foi uma experiência incrível de empatia e solidariedade. Eu tenho certeza que nunca esquecerei de nenhuma. Agradeço demais a minha família, por me incentivar a voltar para os estudos e possibilitar que isso acontecesse. Agradeço a cada amigo que torceu e vibrou comigo cada pequena conquista nos códigos. Agradeço também a mim, pois não foram meses fáceis e precisei de muita determinação para seguir. Daqui para frente, lembrarei de tudo isso. ❤️
@@ -179,4 +185,4 @@ A construção do projeto contou com as seguintes tecnologias:
 * [Telegram](https://t.me/erikafreitas47)
 
 ## 🖋️ Licença
-Este projeto esta sob a licença [MIT](./LICENSE).
+Esse projeto está sob a licença [MIT](./LICENSE).
