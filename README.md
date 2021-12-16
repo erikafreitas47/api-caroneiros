@@ -64,7 +64,7 @@ A construção do projeto contou com as seguintes tecnologias:
    |         |- 📑 anuncioController.js
    |         |- 📑 carroController.js
    |	     |- 📑 caronaController.js
-   |	     |- 📑 usuarioController.js   |     
+   |	     |- 📑 usuarioController.js      
    |
    |    |- 📁 database
    |         |- 📑 mongoConfig.js
@@ -76,7 +76,7 @@ A construção do projeto contou com as seguintes tecnologias:
 	     |- 📑 anuncioSchema.js
    |         |- 📑 carroSchema.js
    |	     |- 📑 caronaSchema.js
-   |	     |- 📑 usuarioSchema.js   |         
+   |	     |- 📑 usuarioSchema.js            
    |
    |    |- 📁 routes
    |	     |- 📑 anuncioRoutes.js
@@ -85,7 +85,7 @@ A construção do projeto contou com as seguintes tecnologias:
    |	     |- 📑 index.js
    |	     |- 📑 usuarioRoutes.js
    |
-   |    |- 📑 app.js   |
+   |    |- 📑 app.js   
    |
    |- 📑 .env
    |- 📑 .env.example
