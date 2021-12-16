@@ -4,7 +4,6 @@
 </h1>
 
 <h1 align="center">
-    <br>
     <p align="center">API Caroneiros 🚗 <p>
 </h1>
 
