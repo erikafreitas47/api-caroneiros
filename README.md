@@ -59,8 +59,8 @@ A construção do projeto contou com as seguintes tecnologias:
         \--  api-caroneiros
             |   README.md
             |   .gitignore
-			|	.env
-			|	.env.example
+	    |	.env
+	    |	.env.example
             |   package-lock.json
             |   package.json
             |   server.js
@@ -70,34 +70,34 @@ A construção do projeto contou com as seguintes tecnologias:
                 |   app.js
                 |
                 ---controllers
-				|
-                |		anuncioController.js
+		|
+                |	anuncioController.js
                 |       caronaController.js 
                 |       carroController.js
-				|		usuarioController.js
-				|
+		|	usuarioController.js
+		|
                 ---database
-				|
-                |		mongoConfig.js            
+		|
+                |	mongoConfig.js            
                 |
-				---helpers
-				|
-                |		auth.js            
+		---helpers
+		|
+                |	auth.js            
                 |
-				---models
+		---models
                 |
-                |		anuncioSchema.js
-				|		caronaSchema.js
-				|		carroSchema.js
-				|		usuarioSchema.js
+                |	anuncioSchema.js
+		|	caronaSchema.js
+		|	carroSchema.js
+		|	usuarioSchema.js
                 |
                 ---routes
                 |       
-                |		anuncioRoutes.js
-				|		caronaRoutes.js
-				|		carroRoutes.js
-				|		index.js
-				|		usuarioRoutes.js
+                |	anuncioRoutes.js
+		|	caronaRoutes.js
+		|	carroRoutes.js
+		|	index.js
+		|	usuarioRoutes.js
                 |__    
 
 ## 🔗 Funcionalidades 
