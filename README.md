@@ -7,9 +7,6 @@
     <p align="center">API Caroneiros 🚗 <p>
 </h1>
 
-## ⛔ Status
-❌ Em andamento
-
 ## 📝 Apresentação
 
 <p align="justify"> O Caroneiros 🚗 é o fruto do projeto de conclusão do Bootcamp do curso de Back-End da {Reprograma}, com a orientação da professora Paula Allemand. A ideia para construir essa aplicação surgiu a partir de uma observação sobre um problema recorrente encontrado na cidade onde resido, como também na região (Santo Amaro - BA, região do Recôncavo Baiano). <br>
@@ -159,6 +156,8 @@ A construção do projeto contou com as seguintes tecnologias:
 | PATCH        | `/caronas/atualizar/:id`| Atualiza informações da carona       |
 | DELETE       | `/caronas/deletar/:id`  | Deleta carona                        |
 
+## ⛔ Status
+❌ Em andamento
 
 ## ⚠️ Implementações futuras
 * Fazer buscas mais refinadas
@@ -180,3 +179,4 @@ A construção do projeto contou com as seguintes tecnologias:
 * [Telegram](https://t.me/erikafreitas47)
 
 ## 🖋️ Licença
+Este projeto esta sob a licença [MIT](./LICENSE).
