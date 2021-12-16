@@ -12,6 +12,34 @@ const getAllAnuncios = async (request, response) => {
     }
 }
 
+const getByFiltros = async (request, response) => {
+    try {
+        
+        const filtrados = await anuncioSchema.find({espacoMala: request.body.espacoMala, aceitaPets: request.body.aceitaPets, cadeiraBebe: request.body.cadeiraBebe});
+
+        response.status(200).json(filtrados);        
+    } catch (error) {
+        response.status(500).json({message: error.message});        
+    }
+}
+
+const getById = async (request, response) => {
+    try {
+        const anuncioEncontrado = await anuncioSchema.findById(request.params.id);
+
+        response.status(200).json(
+            [
+                {
+                    message: "Anuncio encontrado:",
+                    anuncioEncontrado
+                }
+            ]
+        )       
+    } catch (error) {
+        response.status(500).json({message: error.message});        
+    }
+}
+
 const createAnuncio = async (request, response) => {
 
     const authHeader = request.get('authorization');
@@ -141,6 +169,8 @@ const deleteAnuncio = async (request, response) => {
 
 module.exports = {
     getAllAnuncios,
+    getByFiltros,
+    getById,
     createAnuncio,
     updateAnuncio,
     deleteAnuncio
