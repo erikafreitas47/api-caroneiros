@@ -55,50 +55,46 @@ A construção do projeto contou com as seguintes tecnologias:
 - [JsonWebToken](https://www.npmjs.com/package/jsonwebtoken)
 
 ## 🚧 Arquitetura MVC 
-        |
-        \--  api-caroneiros
-            |   README.md
-            |   .gitignore
-	    |	.env
-	    |	.env.example
-            |   package-lock.json
-            |   package.json
-            |   server.js
-            \-- node_modules
-            \-- assets
-            \--src
-                |   app.js
-                |
-                ---controllers
-		|
-                |	anuncioController.js
-                |       caronaController.js 
-                |       carroController.js
-		|	usuarioController.js
-		|
-                ---database
-		|
-                |	mongoConfig.js            
-                |
-		---helpers
-		|
-                |	auth.js            
-                |
-		---models
-                |
-                |	anuncioSchema.js
-		|	caronaSchema.js
-		|	carroSchema.js
-		|	usuarioSchema.js
-                |
-                ---routes
-                |       
-                |	anuncioRoutes.js
-		|	caronaRoutes.js
-		|	carroRoutes.js
-		|	index.js
-		|	usuarioRoutes.js
-                |__    
+```
+ 📁 api-caroneiros
+   |
+   |-  📁 src
+   |    |
+   |    |- 📁 controller
+   |         |- 📑 anuncioController.js
+   |         |- 📑 carroController.js
+   |	     |- 📑 caronaController.js
+   |	     |- 📑 usuarioController.js   |     
+   |
+   |    |- 📁 database
+   |         |- 📑 mongoConfig.js
+   |
+   |    |- 📁 helpers
+   |         |- 📑 auth.js
+   |
+   |    |- 📁 models
+	     |- 📑 anuncioSchema.js
+   |         |- 📑 carroSchema.js
+   |	     |- 📑 caronaSchema.js
+   |	     |- 📑 usuarioSchema.js   |         
+   |
+   |    |- 📁 routes
+   |	     |- 📑 anuncioRoutes.js
+   |         |- 📑 carroRoutes.js
+   |	     |- 📑 caronaRoutes.js
+   |	     |- 📑 index.js
+   |	     |- 📑 usuarioRoutes.js
+   |
+   |    |- 📑 app.js   |
+   |
+   |- 📑 .env
+   |- 📑 .env.example
+   |- 📑 .gitignore
+   |- 📑 package-lock.json
+   |- 📑 package.json
+   |- 📑 README.md
+   |- 📑 server.js
+```
 
 ## 🔗 Funcionalidades 
 
