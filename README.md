@@ -118,6 +118,36 @@ A construção do projeto contou com as seguintes tecnologias:
 
 - Utilize o Postman ou Insomnia para realizar as chamadas e testar os endpoints da API localmente ou via Heroku.
 
+## 🔃 Manipulação da Rota de Apresentação:
+
+| Método HTTP  | Endpoint                | Descrição                            |
+| ------------ | ----------------------- | ------------------------------------ |
+| GET          |      `/`                | Retorna página de apresentação do projeto
+
+
+## 🔃 Manipulação das Rotas de Usuários:
+
+| Método HTTP  | Endpoint                | Descrição                            |
+| ------------ | ----------------------- | ------------------------------------ |
+| GET          | `/usuarios/todos`                | Retorna todos os usuários 
+| POST         | `/usuarios/criar`         | Cria/cadastra um novo usuário        |
+| POST         | `/usuarios/login`         | Login de usuario
+| PATCH          | `/usuarios/atualizar/:id`     | Atualiza informações do usuario     |
+| DELETE       | `/usuario/deletar/:id`     | Deleta usuário         |
+
+## 🔃 Manipulação das Rotas de Anuncios:
+
+| Método HTTP  | Endpoint                | Descrição                            |
+| ------------ | ----------------------- | ------------------------------------ |
+| GET          | `/anuncios/todos`                | Retorna todos os anuncios 
+| GET          | `anuncios/filtros`               | Retorna anuncios por filtros específicos
+| GET         | `/anuncios/:id`         | Retorna anuncio por ID
+| POST         | `/anuncios/criar`         | Cria/cadastra um novo anuncios        |
+| PATCH          | `/anuncios/atualizar/:id`     | Atualiza informações do anuncio     |
+| DELETE       | `/anuncios/deletar/:id`     | Deleta anuncio      |
+
+
+
 
 ## ⚠️ Implementações futuras
 * Fazer buscas mais refinadas
