@@ -15,25 +15,20 @@
 
 ## 📝 Apresentação
 
-<p align="justify"> O Caroneiros 🚗 é o projeto de conclusão do Bootcamp do curso de Back-End da {Reprograma}, com a orientação da professora Paula Allemand. A ideia para construir essa aplicação surgiu a partir de uma observação sobre um problema recorrente encontrado na cidade onde resido, como também na região (Santo Amaro - BA, região do Recôncavo Baiano). <br>
+<p align="justify"> O Caroneiros 🚗 é o fruto do projeto de conclusão do Bootcamp do curso de Back-End da {Reprograma}, com a orientação da professora Paula Allemand. A ideia para construir essa aplicação surgiu a partir de uma observação sobre um problema recorrente encontrado na cidade onde resido, como também na região (Santo Amaro - BA, região do Recôncavo Baiano). <br>
 
-<p align="justify"> Essa região possui cidades geograficamente muito próximas, levando ao evento onde as pessoas comumente moram em uma cidade e trabalham/estudam em outras. Além do fato de que, por serem cidades do interior, geralmente não há tanta diversidade em opções lazer como nas grandes cidades e capitais. 
+<p align="justify"> Essa região possui cidades geograficamente muito próximas, levando ao evento onde as pessoas comumente moram em uma cidade e trabalham/estudam em outras. Além do fato de que, por serem cidades do interior, geralmente não há tanta diversidade em opções lazer como nas grandes cidades e capitais. Com isso, a procura por caronas entre as cidades vem aumentando progressivamente.
 
 <p align="justify"> Outro fator importante que levou a criação desse projeto é que, apesar de ter cobertura na maioria das cidades da Bahia, grandes aplicativos como iFood, Uber, Waze Carpool, Bla Bla Car não funcionam aqui na região. Entretando, o que funcionam por aqui são aplicações feitas por desenvolvedores locais, com grande participação os usuários.
-<p align="justify"> Observando essas questões, juntamente com a grande busca por caronas nas redes sociais (Instagram e Facebook), o Caroneiros 🚗 tem como principal objetivo juntar pessoas que precisam de caronas com quem tem para oferecer, de forma mais prática e efetiva.
-
- <br>
+<p align="justify"> Observando essas questões, juntamente com a grande busca por caronas nas redes sociais (stories no Instagram e grupos no Facebook), o Caroneiros 🚗 tem como principal objetivo juntar pessoas que precisam de caronas com quem tem para oferecer, de forma mais prática e efetiva.
 
  ## ➡️ Link
 
  - Apresentação
 
-<br>
-
 ## 📚 Aprendizados
 
 O projeto final é uma API Rest fundamentada no método CRUD, que são: Create (criar), Read (leitura), Update (atualizar), Delete (deletar).
-<br>
 
 
 ## ⚒️ Tecnologias
@@ -106,7 +101,6 @@ A construção do projeto contou com as seguintes tecnologias:
 				|		index.js
 				|		usuarioRoutes.js
                 |__    
-<br>
 
 ## 🔗 Funcionalidades 
 
@@ -115,7 +109,6 @@ A construção do projeto contou com as seguintes tecnologias:
 * Buscar/Listar: Todos anúncios de caronas estão disponíveis, com os seguintes filtros: anúncio por ID, se há espaço na mala, se aceita transportar animais e se há possibilidade de transportar crianças no assento próprio para elas.
 
 * Atualizar e deletar usuários, carros e anúncios e caronas, com permissão da autenticação.
-<br>
 
 ## ➡️ Rotas
 
@@ -125,7 +118,6 @@ A construção do projeto contou com as seguintes tecnologias:
 
 - Utilize o Postman ou Insomnia para realizar as chamadas e testar os endpoints da API localmente ou via Heroku.
 
-<br>
 
 ## ⚠️ Implementações futuras
 * Fazer buscas mais refinadas
@@ -135,13 +127,9 @@ A construção do projeto contou com as seguintes tecnologias:
 * Opção de dividir gasolina
 * Opção de caronas para encomendas
 
-<br>
-
 ## 🗣️ Agradecimentos
 
-<p align="justify"> Agradeço a toda equipe da Reprograma. Entrar para esse curso foi, sem dúvidas, uma das maiores alegrias desse ano. Além de ser uma grande esperança de melhorias no futuro. Agradeço à todas as professoras que tive durante as semanas do curso. A nossa querida facilitadora, as nossas monitoras sempre presentes, e principalmente as minhas colegas de turma. Essas mulheres incríveis que com certeza acompanharei para o resto da vida. Passar esses meses ao lado dessas mulheres foi uma experiência incrível de empatia e solidariedade. Eu tenho certeza que nunca esquecerei de nenhuma. Agradeço demais a minha família, por me incentivar a voltar para os estudos e possibilitar que isso acontecesse. Agradeço a cada amigo que torceu e vibrou comigo cada pequena conquista nos códigos. Agradeço também a mim, pois não foram meses fáceis e precisei de muita determinação para seguir. Daqui para frente, lembrarei de tudo isso. ❤️
-
-<br>
+<p align="justify"> Agradeço a toda equipe da Reprograma. Entrar para esse curso foi, sem dúvidas, uma das maiores alegrias desse ano. Além de ser uma grande esperança de melhorias no futuro. Agradeço à todas as professoras que tive durante as semanas do curso. Conheci tantas mulheres incríveis que, com certeza, me inspiraram a seguir e aprender mais. A nossa querida facilitadora, as nossas monitoras sempre presentes, e principalmente as minhas colegas de turma. Essas mulheres incríveis que com certeza acompanharei para o resto da vida. Passar esses meses ao lado dessas mulheres foi uma experiência incrível de empatia e solidariedade. Eu tenho certeza que nunca esquecerei de nenhuma. Agradeço demais a minha família, por me incentivar a voltar para os estudos e possibilitar que isso acontecesse. Agradeço a cada amigo que torceu e vibrou comigo cada pequena conquista nos códigos. Agradeço também a mim, pois não foram meses fáceis e precisei de muita determinação para seguir. Daqui para frente, lembrarei de tudo isso. ❤️
 
 ## 📢 Fale comigo
 
@@ -149,7 +137,5 @@ A construção do projeto contou com as seguintes tecnologias:
 
 * [Linkedin](https://www.linkedin.com/in/%C3%A9rika-de-freitas-b63331ba/) 
 * [Telegram](https://t.me/erikafreitas47)
-
-<br>
 
 ## 🖋️ Licença
