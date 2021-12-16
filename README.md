@@ -129,24 +129,42 @@ A construção do projeto contou com as seguintes tecnologias:
 
 | Método HTTP  | Endpoint                | Descrição                            |
 | ------------ | ----------------------- | ------------------------------------ |
-| GET          | `/usuarios/todos`                | Retorna todos os usuários 
-| POST         | `/usuarios/criar`         | Cria/cadastra um novo usuário        |
-| POST         | `/usuarios/login`         | Login de usuario
-| PATCH          | `/usuarios/atualizar/:id`     | Atualiza informações do usuario     |
-| DELETE       | `/usuario/deletar/:id`     | Deleta usuário         |
+| GET          | `/usuarios/todos`       | Retorna todos os usuários            |
+| POST         | `/usuarios/criar`       | Cria/cadastra um novo usuário        |
+| POST         | `/usuarios/login`       | Login de usuario                     |
+| PATCH        | `/usuarios/atualizar/:id`| Atualiza informações do usuario     |
+| DELETE       | `/usuarios/deletar/:id` | Deleta usuário                       |
 
 ## 🔃 Manipulação das Rotas de Anuncios:
 
+| Método HTTP  | Endpoint                | Descrição                               |
+| ------------ | ----------------------- | --------------------------------------- |
+| GET          | `/anuncios/todos`       | Retorna todos os anuncios               |
+| GET          | `/anuncios/filtros`     | Retorna anuncios por filtros específicos|
+| GET          | `/anuncios/:id`         | Retorna anuncio por ID                  |
+| POST         | `/anuncios/criar`       | Cria/cadastra um novo anuncios          |
+| PATCH        | `/anuncios/atualizar/:id`| Atualiza informações do anuncio        |
+| DELETE       | `/anuncios/deletar/:id` | Deleta anuncio                          |
+
+
+## 🔃 Manipulação das Rotas de Carros:
+
 | Método HTTP  | Endpoint                | Descrição                            |
 | ------------ | ----------------------- | ------------------------------------ |
-| GET          | `/anuncios/todos`                | Retorna todos os anuncios 
-| GET          | `anuncios/filtros`               | Retorna anuncios por filtros específicos
-| GET         | `/anuncios/:id`         | Retorna anuncio por ID
-| POST         | `/anuncios/criar`         | Cria/cadastra um novo anuncios        |
-| PATCH          | `/anuncios/atualizar/:id`     | Atualiza informações do anuncio     |
-| DELETE       | `/anuncios/deletar/:id`     | Deleta anuncio      |
+| GET          | `/carros/todos`         | Retorna todos os carros              |
+| POST         | `/carros/criar`         | Cria/cadastra um novo carro          |
+| PATCH        | `/carros/atualizar/:id` | Atualiza informações do carro        |
+| DELETE       | `/carros/deletar/:id`   | Deleta carro                         |
 
 
+## 🔃 Manipulação das Rotas de Caronas:
+
+| Método HTTP  | Endpoint                | Descrição                            |
+| ------------ | ----------------------- | ------------------------------------ |
+| GET          | `/caronas/todas`        | Retorna todos as caronas             |
+| POST         | `/caronas/criar`        | Cria/cadastra uma nova carona        |
+| PATCH        | `/caronas/atualizar/:id`| Atualiza informações da carona       |
+| DELETE       | `/caronas/deletar/:id`  | Deleta carona                        |
 
 
 ## ⚠️ Implementações futuras
