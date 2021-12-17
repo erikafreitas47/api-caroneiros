@@ -102,9 +102,9 @@ A construção do projeto contou com as seguintes tecnologias:
 
 ## ➡️ Rotas
 
-- Local: http://localhost:9090
+- Local: http://localhost:9090 (rodando localmente)
 
-- Heroku: Link Heroku
+- Heroku: https://api-caroneiros.herokuapp.com/ (consumir API)
 
 - Utilize o Postman ou Insomnia para realizar as chamadas e testar os endpoints da API localmente ou via Heroku.
 
