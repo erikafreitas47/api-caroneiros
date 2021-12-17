@@ -11,9 +11,9 @@
 
 <p align="justify"> O Caroneiros 🚗 é o fruto do projeto de conclusão do Bootcamp do curso de Back-End da {Reprograma}, com a orientação da professora Paula Allemand. A ideia para construir essa aplicação surgiu a partir de uma observação sobre um problema recorrente encontrado na cidade onde resido, como também na região (Santo Amaro - BA, região do Recôncavo Baiano). <br>
 
-<p align="justify"> Essa região possui cidades geograficamente muito próximas, levando ao evento onde as pessoas comumente moram em uma cidade e trabalham/estudam em outras. Além do fato de que, por serem cidades do interior, geralmente não há tanta diversidade em opções lazer como nas grandes cidades e capitais. Com isso, a procura por caronas entre as cidades vem aumentando progressivamente.
+<p align="justify"> Essa região possui cidades geograficamente muito próximas, levando ao evento onde as pessoas comumente moram em uma cidade e trabalham/estudam em outras. Além do fato de que, por serem cidades do interior, geralmente não há tanta diversidade em opções de lazer como nas grandes cidades e capitais. Com isso, a procura por caronas entre as cidades vem aumentando progressivamente.
 
-<p align="justify"> Outro fator importante que levou a criação desse projeto é que, apesar de ter cobertura na maioria das cidades da Bahia, grandes aplicativos como iFood, Uber, Waze Carpool, Bla Bla Car não funcionam aqui na região. Entretando, o que funcionam por aqui são aplicações feitas por desenvolvedores locais, com grande participação os usuários.
+<p align="justify"> Outro fator importante que levou a criação desse projeto é que, apesar de ter cobertura na maioria das cidades da Bahia, grandes aplicativos como iFood, Uber, Waze Carpool, Bla Bla Car não funcionam aqui na região. Entretanto, o que funciona por aqui são aplicações feitas por desenvolvedores locais, com grande participação dos usuários.
 <p align="justify"> Observando essas questões, juntamente com a grande busca por caronas nas redes sociais (stories no Instagram e grupos no Facebook), o Caroneiros 🚗 tem como principal objetivo juntar pessoas que precisam de caronas com quem tem para oferecer, de forma mais prática e efetiva.
 
  ## ➡️ Link
