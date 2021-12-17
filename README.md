@@ -158,6 +158,31 @@ A construção do projeto contou com as seguintes tecnologias:
 | PATCH        | `/caronas/atualizar/:id`| Atualiza informações da carona       |
 | DELETE       | `/caronas/deletar/:id`  | Deleta carona                        |
 
+## 🔎 Demonstração da aplicação, realizada no Postman:
+### Criação de usuário
+<h1 align="center">
+  <img src="./assets/criar-usuario.gif" width="900">
+<p align="center"><p>
+</h1>
+
+### Login de usuário
+<h1 align="center">
+  <img src="./assets/login-usuario.gif" width="900">
+<p align="center"><p>
+</h1>
+
+### Criação de anúncio
+<h1 align="center">
+  <img src="./assets/criar-anuncio.gif" width="900">
+<p align="center"><p>
+</h1>
+
+### Todos os anúncios
+<h1 align="center">
+  <img src="./assets/todos-anuncios.gif" width="900">
+<p align="center"><p>
+</h1>
+
 ## ❕ Dados para Collection Anúncios:
 - id: gerado automaticamente
 - Usuário: id do usuário, obrigatório
