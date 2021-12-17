@@ -83,6 +83,8 @@ A construção do projeto contou com as seguintes tecnologias:
    |
    |    |- 📑 app.js   
    |
+   |- 📑 Procfile
+   |- 📑 LICENSE.md
    |- 📑 .env
    |- 📑 .env.example
    |- 📑 .gitignore
