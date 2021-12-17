@@ -4,5 +4,5 @@ require('dotenv').config()
 const port = process.env.PORT
 
 app.listen(port, () => {
-    console.log(`Servidor do Projeto Final rodando na porta ${port}`);
+    console.log(`Servidor da API - Caroneiros rodando na porta ${port}`);
 })
